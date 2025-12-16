@@ -1,0 +1,17 @@
+->set global identity 
+	git config --global user.name "your_name"
+	git config --global user.email "your_email"
+-> U = Untracked
+-> M = Modified
+-> A = Added/Track
+-> git add file_name or . for all files
+-> git commit -m "your_message"
+-> git remote add origin origin_name
+-> git brach -M brach_name
+-> git push -u origin branch_name
+-> git pull origin brach_name
+-> git clone url_here
+-> git log --oneline
+
+workflow:
+	working directory -> staging area -> commit area -> GitHub
