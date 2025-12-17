@@ -1,0 +1,23 @@
+Internet:
+	User -> packets -> Nearest Tower -> Electric wires -> ISP(Internet Service Provider) -> DNS(Domain Name System) -> ISP -> another ISP if out of country else: to the server
+
+
+Best mode of transferring data is in 2 forms:
+	Ocean (mostly used) -> fiber optic cables
+	Satellite
+ 
+Devices doesn't have their IP Address:
+	If user wants to use internet the ISP provides a ip address for the data transfer
+
+DHCP Protocol
+
+
+WEb 1.0 -> Read only 1990
+WEB 2.0 -> Read And Write 2004
+WEB 3.0 -> User has the ownership of the data controls through the secret key
+
+Google.com,Sheryians.com   -> Domain Names
+IP number (Internet Protocol) -> a line provided for using internet / identity in world
+MAC(Media Access Control) Address -> used by routers for identifying the connected users / identity in lAN 
+Routing -> How the data is transferred and where to transfer is called routing (done by ISP)
+DNS and ISP works together to Deliver Datad

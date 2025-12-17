@@ -1,0 +1,15 @@
+Client - Devices on which the internet is used  . user side(browser,mobile app,etc).
+Server - The Coded/programmed system which serves is called server
+HTTP - Hyper Text Transfer Protocol (Rules)
+
+Client Server Process:
+	Request ->Server Accept -> Processing -> Response -> Client System Accept -> Rendering
+Cache - Store data of the website locally for website Efficiency
+
+URL ->Cache->Dns Lookup->Request to server->server processing->http response->browser rendering.
+
+Frontend:User interface
+Backend:Server side which can store ,give response and handle logical requests
+
+Static website: the data of the website doesn't change (Fast,Simple,Cheap)
+Dynamic website: give customizd and live content (Content Change based on User)
