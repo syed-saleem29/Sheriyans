@@ -1,0 +1,18 @@
+Internet Protocol:(Rules)
+	TCP:(Transmission Control Protocol)
+		Not a single packet must be missed 
+		It make sures that the user received the data (it takes acknowledgement)
+		It Guarantees the data is delivered
+		Established Connection Using 3-way handshake
+			syn -> syn ack -> ack
+		First the connection is setup, then the transfer is started
+
+	UDP:(User Datagram Protocol)
+		Doesn't care if the packets are missed, what matters most is the data is transmitted live
+		If needed the live data transfer (live streaming used UDP Protocol)
+		It make sures that the user received the data (it takes acknowledgement)
+		It Guarantees the data is delivered
+		No Acknowledgement
+		No Connection/Connectionless
+		It throws the data packets
+		It transfers the data without making any connection
