@@ -1,0 +1,27 @@
+HTTP:(Hyper Text Transfere Protocol)
+ 	Versions 1.0,1.1,2.0,3.0
+ 	Slow -> Fastest
+ 	Status Codes:
+ 		200 : Success
+ 		301 : Redirect
+ 		404 : Not Found
+ 		500 : Server Error
+
+HTTPS:(Hyper Text Transfere Protocol Secured)
+ 	SSL/TLS Encryption
+ 	Handshake = Shared Key
+ 	Safe Tunnel
+Proxy:
+ 	It Sends signal to another system and that system searches behalf of this system
+ 	It is different from VPN
+ 	Example: In college system Insta, FB is ban, so it sends the query to home system and on home system these are not banned so it will search and give back the searched data
+ 	Proxy works on only one Browser
+	It works on Browsers
+	In VPN it works on Devices
+	VPN:(Virtual Private Network)
+		It Encrypts all traffic from the client
+		It is used to access blocked Sites
+
+Reverse Proxy:
+	It is programmed system which is used to tell the upcoming request on which server it has to go
+	Similar to load balancer
