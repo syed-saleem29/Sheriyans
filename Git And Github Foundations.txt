@@ -1,0 +1,16 @@
+Git:(Version Control System)
+	It is used for tracking the version of the changes made in the file or folder etc.
+	Firstly we have to initialize the git in the folder in which you have to track the files or folders
+
+
+GitHub:(Collaboration)
+	It is a platform where multiple people can collaborate on a single project for parallel development
+	It is used when multiple people are working on the same project
+
+Working Directory -> Staging Area -> Local Repository -> Remote Repository
+
+Store:(Git Maintain record of these 3 things
+What?
+When?
+Who?
+git Checkout commit_id (Go to previous commit or change the branch)
