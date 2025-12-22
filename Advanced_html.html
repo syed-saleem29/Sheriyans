@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance Html</title>
+    <link rel="shortcut icon" href="https://static.vecteezy.com/system/resources/thumbnails/057/162/872/small/adorable-baby-panda-cub-eating-bamboo-on-a-tree-branch-in-a-lush-green-forest-habitat-photo.jpeg" type="image/x-icon">
+    <meta name="description" content="Hello There This is an advanced html file">
+</head>
+<body>
+    
+    <form >
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Username" required pattern="[A-Za-z0-9]{5,15}" title="5 to 15 alphanumeric characters"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Email" required><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter Password" required minlength="8" title="At least 8 characters"><br><br>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="18" max="100" required><br><br>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required><br><br>
+
+        <input type="checkbox" name="yes" id="yes">
+        <label for="yes">I agree to the terms and conditions</label><br>
+
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">Male</label><br>
+        <input type="radio" id="female" name="gender" value="female" required>
+        <label for="female">Female</label>  <br><br>
+
+        <input type="submit" value="Submit">
+
+        <details>
+            <summary>More Info</summary>
+            <p>This form collects user information including username, email, password, age, and date of birth. Please ensure all fields are filled out correctly before submitting.</p>
+        </details>
+    </form>
+
+</body>
+</html>
