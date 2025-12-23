@@ -1,0 +1,36 @@
+@font-face {
+    font-family: horror;
+    src: url(./Another\ Danger\ -\ Demo.otf);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+}
+#main {
+    height: 100%;
+    width: 100%;
+    background-image: url(car.jpg);
+    background-size: cover;
+    text-align: center;
+}
+h1{
+    font-family: horror;
+    font-size: 100px;
+    color: black;
+    text-shadow: 2px 2px 5px black;
+    font-weight: 100;
+}
+button{
+    padding: 12px 30px;
+    background-color: rgb(252, 143, 0);
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border: 2px solid black;
+    border-radius: 8px;
+}
