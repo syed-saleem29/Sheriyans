@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+/* #car1{
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+}
+#car2{
+    height: 200px;
+    width: 200px;
+    background-color: orange;
+    position: absolute; /*absolute item moves upwards */
+    /* top bottom right left and z index only works when the element have position attribute  
+}*/
+/* in position relative it works based on parent element ,doesnt leave the parent element */
+
+/* #car3{
+    height: 300px;
+    width: 300px;
+    background-color: lime; dd
+} */
+
+#box1 {
+
+    position: relative;
+    height: 200px;
+    width: 200px;
+    background-color: red;
+}
+#small{
+    position: absolute;
+    top: 35%;
+    left: 35%;
+    height: 50px;
+    width: 50px;
+    background-color: green;
+}
+#homepage {
+    height: 3000px;
+    width: 100%;
+    background-color: black;
+}
+#side{
+    height: 50px;
+    width: 50px;
+    background-color: orange;
+    position: fixed;
+    top: 90%;
+    left: 95%;
+    border-radius: 100px;
+}
+#parent {
+    width: 100%;
+    background-color: black;
+
+}
+#child1{
+height: 900px;
+background-color: gray;
+}
+#child2{
+height: 900px;
+background-color: brown;
+}
+#sticky{
+    position: sticky;
+    top: 0;
+    height: 200px;
+    width: 200px;
+    background-color: linear-gradient(orange,red);
+}
