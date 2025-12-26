@@ -1,0 +1,93 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+html, body {
+   height: 100%;
+   width: 100%;
+   background-color: black;
+}
+/* 
+#box1 {
+    height: 150px;
+    width: 150px;
+    background-color: orange;
+    transform: translateX(-50%);
+    transform: translateY(-50%); 
+    clip-path: circle(50% at 50% 50%);
+    transform: translate(-50% ,-50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+#box2 {
+    height: 150px;
+    width: 150px;
+    background-color: lightblue;
+    position: absolute;
+    top: 40%;
+    left: 35%;
+}
+#box3 {
+    height: 150px;
+    width: 150px;
+    background-color: rgb(17, 193, 17);
+} */
+
+#main{
+    background-color: lightblue;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    
+}
+#card {
+    margin: 20px;
+    height: 330px;
+    width: 250px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 10px 10px rgba(0,0,0,0.5);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    
+}
+#card img {
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+
+    border-radius: 50%;
+}
+#card h2 {
+    padding: 5px;
+}
+#card p {
+    font-size: 16px;
+    color: grey;
+    text-align: center;
+    font-weight: 6200;
+}
+#card button {
+    background-color: orange;
+    border: 2px solid orange;
+    padding: 10px 30px;
+    border-radius: 10px;
+    font-weight: 600;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+#card button:hover {
+    background-color: white;
+    color: orange;
+    border: 2px solid orange;
+}
