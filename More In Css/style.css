@@ -6,4 +6,18 @@
 html, body {
    height: 100%;
    width: 100%;
+   background-color: black;
+}
+#box {
+   height: 100px;
+   width: 100px;
+   background-color: red;
+   border: 2px solid white;
+   /* margin: 10px; */
+}
+/* #box:nth-child(2){
+   background-color: blue;
+} */
+ #box:nth-child(2n){
+   background-color: blue;
 }
