@@ -15,15 +15,102 @@ main {
     display: grid;
     /* grid-template-columns: 100px  minmax(100px, 500px) 15%; */
     /* grid-template-columns: repeat(2,1fr); */
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     row-gap: 10px;
     column-gap: 10px;
     align-items: center;
-    justify-items: center;
+    justify-items: center; */
     /* grid-gap: 10px; */
+    /* grid-template-columns: 300px 1fr;
+    grid-template-rows: 100px 1fr 80px;
+    grid-template-areas: "header header"
+                         "aside section"
+                         "footer footer"; 
+    grid-gap: 10px; */
+    grid-template-columns: 40% 20% auto;
+    grid-template-rows: 33% auto 33%;
+    grid-template-areas: "left-up top-up left-top"
+                         "left-up center-mid center-right"
+                         "bottom-left bottom-left center-right";
+    grid-gap: 10px;
+    padding: 10px;
 
 }
+div{
+    border-radius: 20px;
+}
+
+.child1 {
+    background-color: crimson;
+    grid-area: left-up;
+}
+
+.child2 {
+    background-color: blue;
+    grid-area: top-up;
+}   
+.child3 {
+    background-color: green;
+    grid-area: left-top;
+}
+.child4 {
+    background-color: yellow;
+    grid-area: bottom-left;
+
+}
+.child5 {
+    background-color: pink;
+    grid-area: center-mid;
+}
+.child6 {
+    background-color: orange;
+    grid-area: center-right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* header{
+    background-color: orange;
+    grid-area: header;
+}
+
+aside{
+    background-color: teal;
+    grid-area: aside;
+}
+section{
+    background-color: purple;
+    grid-area: section;
+}
+footer{
+    background-color: green;
+    grid-area: footer;
+} */
+
+
+
+
+
+
+
+
+
+
 .child {
     background-color: crimson;
     border: 2px solid white;
