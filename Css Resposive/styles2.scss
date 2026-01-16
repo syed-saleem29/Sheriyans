@@ -10,7 +10,7 @@ html, body {
     width: 100%;
     background-color: rgb(23, 23, 23);
     font-size: clamp(14px, 1vw, 18px);
-    overflow: hidden;
+    // overflow: hidden;
     
 }
 
@@ -32,10 +32,9 @@ section {
 
 main {
     width: 100%;
-    display: flex;
-    flex-direction: column;
+    @include flexcolumn(0);
 
-        section {
+        section.view1 {
             width: 100%;
             @include flexcolumn(1rem);
             padding: 1rem;
@@ -90,13 +89,107 @@ main {
             }
             
         }
+
+        section.view2 {
+            width: 100%;
+            @include flexcolumn(0);
+
+            .top,
+            .bottom {
+                display: flex;
+                justify-content: space-around;
+                padding: 1.2rem;
+                width: 100%;
+
+                .element {
+                    text-align: center;
+                    @include flexcolumn(1.5rem);
+                    small {
+                        color: rgb(188, 188, 188);
+                        font-size: 1rem;
+  
+                    }
+                    h2{
+                        font-size: 2.7rem;
+                        font-weight: 400;
+                        // padding-top: 1rem;
+
+                    }
+                }
+            }
+
+        }
+
+        section.view3 {
+            width: 100%;
+            @include flexcolumn(1rem);
+            padding: 0.9rem;
+            
+            .top {
+                width: 100%;
+                
+                img  {
+                    width: 100%;
+                    border-radius: 0.7rem;
+                    display:block;
+                }
+            }
+            .bottom {
+                background-color: rgb(38, 38, 38);
+                border-radius: 10px;   
+                padding: 1.5rem;
+                @include flexcolumn(1.5rem);
+
+
+                .text {
+                    @include flexcolumn(0.7rem);
+
+                    h1 {
+                        font-weight: 350;
+                        font-size: 2.5rem;
+                        text-transform: uppercase;
+
+                    }
+
+                    .paragraph {
+                        display: ini;
+                        
+                    }
+
+
+                    p{
+                        font-weight: 400;
+                        font-size: 1.2rem;
+                        line-height: 1.6;
+                        opacity: 0.6;
+                        display: inline;
+                        
+                    }
+                    
+                }
+                
+                
+            }
+
+        }
     }
     
+
+
+
+
+
+
+
+
+
+
+
     @media (min-width:900px){
         main{
             // padding: 20px;
             align-items: center;
-            section {
+            section.view1 {
                 flex-direction: row;
                 padding: 1rem 4rem ;
                 
@@ -106,6 +199,26 @@ main {
                 .bottom{
                     justify-content: space-between;
                 }
+        }
+        section.view2 {
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        section.view3{
+            flex-direction: row-reverse;
+            padding: 1rem 4rem;
+            .top,
+            .bottom{
+                width: 50%;
+            }
+            .bottom{
+                justify-content: space-between;
+
+                .paragraph {
+                    display: flex;
+                    gap: 2rem;
+                }
+            }
         }
     }
 }
