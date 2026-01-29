@@ -15,15 +15,47 @@ main{
     justify-content: center;
     align-items: center;
 }
-
-.card div{
-    height: 450px;
-    width: 250px;
+.card {
+    
+    /* height: 450px; */
+    width: 280px;
     background-color: white;
     border-radius: 5px;
+    position: absolute;
+}
+
+.card div{
+    position: relative;
+    overflow: hidden;
 }
 img{
-    width: 220px;
+    width: 100%;
     border-radius: 15px;
     padding: 10px;
+    
+}
+i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 50px;
+    /* color: white; */
+
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: url(https://t3.ftcdn.net/jpg/01/14/77/58/360_F_114775804_4yfG9qbKp1NlF1RLo4MUlGIVj9MWhnnc.jpg);
+    background-size: cover;
+    color: transparent;
+
+
+    transform: translate(-50%,-50%) scale(1) rotate(-60deg) ;
+    transition: all cubic-bezier(.65,1,.77,1.44) 0.3s;
+
+    opacity: 0;
+}
+
+h2{
+    padding: 10px;
+    text-align: center;
 }
