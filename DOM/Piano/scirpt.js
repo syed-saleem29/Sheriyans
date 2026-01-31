@@ -86,20 +86,11 @@ keyrole = {
     }
 }
 
-// Object to track active key timeouts
-const activeKeyTimeouts = {};
-
 document.addEventListener('keydown', function(event){
     let keyentered = event.key;
     let keyfunction = keyrole[keyentered];
     
-    if (!keyfunction) return; // Skip if key not mapped
-    
-    // Clear any existing timeout for this key
-    if (activeKeyTimeouts[keyentered]) {
-        clearTimeout(activeKeyTimeouts[keyentered]);
-        delete activeKeyTimeouts[keyentered];
-    }
+    if (!keyfunction) return; 
     
     let keyelement = document.querySelector("#"+keyfunction.keyval);
     
@@ -110,49 +101,16 @@ document.addEventListener('keydown', function(event){
             keyfunction.keytone.currentTime = 0;
         }
         
-        // Play the audio
-        keyfunction.keytone.play().catch(e => {
-            console.log("Audio play failed:", e);
-        });
+        keyfunction.keytone.play()
         
-        // Apply visual effect
         keyelement.style.backgroundColor = keyfunction.color;
         keyelement.style.marginTop = "10px";
-        keyelement.style.marginBottom = "-10px"; // Add this to prevent layout shift
+        keyelement.style.marginBottom = "-10px"; 
         
-        // Set timeout to reset the key
-        activeKeyTimeouts[keyentered] = setTimeout(function(){
+        setTimeout(function(){
             keyelement.style.marginTop = "";
             keyelement.style.marginBottom = "";
             keyelement.style.backgroundColor = "";
-            console.log(activeKeyTimeouts);
-            delete activeKeyTimeouts[keyentered];
         }, 100);
     }
 });
-
-
-
-
-
-
-
-// Saleem Function
-// document.addEventListener('keydown', function(event){
-//     let keyentered = event.key
-//     let keyfunction = keyrole[keyentered]
-//     // console.log(keyfunction.keyval);
-//     let keyelement = document.querySelector("#"+keyfunction.keyval)
-//     // console.log(keyelement);
-    
-//     keyfunction.keytone.play()
-//     keyelement.style.backgroundColor = keyfunction.color
-//     keyelement.style.marginTop = "10px"
-    
-//     setTimeout(function(){
-//         keyelement.style.marginTop = ""
-//         keyelement.style.backgroundColor = ""
-//     }, 100);
-    
-    
-// })
