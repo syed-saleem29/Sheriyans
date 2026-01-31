@@ -6,40 +6,120 @@
 html, body {
    height: 100%;
    width: 100%;
-    background-color: black;
+    background: linear-gradient(to right bottom,rgb(25, 25, 25),rgb(36, 36, 36),black);
     color: white;
     font-family: Arial, Helvetica, sans-serif;
 }
 main{
     height: 100%;
     width: 100%;
+    padding: 10px;
+}
+
+section{
+    height: 100%;
+    width: 350px;
+    /* background-color: black; */
+    border-radius: 5px;
+    overflow: hidden;
+    margin: auto;
+}
+.all-reels{
+    /* background-color: crimson; */
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    scroll-snap-type: y mandatory;
+}
+
+.all-reels::-webkit-scrollbar{
+    display: none;
+}
+.reel{
+    height: 100%;
+    width: 100%;
+    position: relative;
+
+    margin-bottom: 10px;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+.main-video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    
+}
+.bottom{
+    /* height: 40px; */
+    padding: 20px 10px;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.88));
+    position: absolute;
+    bottom: 0;
+
+}
+
+.user{
     display: flex;
     align-items: center;
-    flex-direction: column;
-    justify-content: center;
+    margin-bottom: 7px;
+      
 }
-.elem{
-    display: flex;
-    justify-content: space-between;
-    width: 500px;
-    background-color: rgb(46, 46, 46);
-    border-radius: 10px;
-    padding: 15px 25px;
-    margin: 10px;
-    font-weight: 500;
-    font-size: 20px;
+.user-img{
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+h3{
+    font-weight: 400;
+    font-size: 15px;
+}
+.user-name{
+    margin-left: 8px;
 }
 button{
-    background-color: royalblue;
-    color: white;
-    padding: 10px 20px;
-    font-weight: 500;
-    border: none;
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 2px 6px;
     border-radius: 5px;
+    color: white;
+    margin-left: 8px;
+    font-weight: 600;
 }
-button:hover{
-    background-color: rgb(40, 66, 144);
+
+.right{
+    width: 40px;
+    position: absolute;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    gap: 15px;
+    bottom: 8%;
+    align-items: center;
+    justify-content: center;
 }
-button:active{
-    scale: 0.95;
+
+.icon{
+    font-size: 30px;
+    font-weight: lighter;
+}
+
+h6{
+    font-size: 13px;
+}
+.like,.share,.save,.comment{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+h4{
+    cursor: pointer;
+}
+
+.love{
+    color:red;
 }
