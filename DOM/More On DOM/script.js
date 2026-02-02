@@ -105,23 +105,26 @@ const reels = [
         video: "./reels/video4.mp4",
 
         userprofile: "https://images.unsplash.com/photo-1511367461989-f85a21fda167"
-    },
+      },
     {
-        username: "learnanimations",
-        likeCount: 18740,
-        isLiked: false,
-        commentCount: 350,
-        shareCount: 92,
-        isFollowed: true,
-        caption: "GSAP can literally change your career. Start today.",
-        video: "./reels/video5.mp4",
-
-        userprofile: "https://images.unsplash.com/photo-1494790108377-be9c29b29330"
+      username: "learnanimations",
+      likeCount: 18740,
+      isLiked: false,
+      commentCount: 350,
+      shareCount: 92,
+      isFollowed: true,
+      caption: "GSAP can literally change your career. Start today.",
+      video: "./reels/video5.mp4",
+      
+      userprofile: "https://images.unsplash.com/photo-1494790108377-be9c29b29330"
     }
-];
+  ];
+  
+  let sum = ' '
+   
+  let allReels = document.querySelector('.all-reels')
 
-let sum = ' '
-reels.forEach(function(elem){
+reels.forEach(function(elem, idx){
     sum += `<div class="reel">
             <video class="main-video" muted autoplay loop src="${elem.video}"></video>
             <div class="bottom">
@@ -138,7 +141,7 @@ reels.forEach(function(elem){
               <h3>${elem.caption}</h3>
             </div>
             <div class="right">
-              <div class="like">
+              <div id=${idx}  class="like">
                 <h4 class="like-icon icon">${elem.isLiked?'<i class="ri-heart-3-fill love"></i>':'<i class="ri-heart-3-line"></i>'}</h4>
                 <h6>${elem.likeCount}</h6>
               </div>
@@ -157,5 +160,4 @@ reels.forEach(function(elem){
           </div>`
 })
 
-let allReels = document.querySelector('.all-reels')
 allReels.innerHTML = sum

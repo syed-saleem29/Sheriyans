@@ -111,15 +111,24 @@ button{
 h6{
     font-size: 13px;
 }
+
 .like,.share,.save,.comment{
     text-align: center;
     display: flex;
     flex-direction: column;
 }
+
 h4{
     cursor: pointer;
 }
 
 .love{
     color:red;
+}
+
+.right > div h4{
+    pointer-events: none;
+}
+.right > div h6{
+    pointer-events: none;
 }
