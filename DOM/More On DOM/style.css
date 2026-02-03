@@ -132,3 +132,27 @@ h4{
 .right > div h6{
     pointer-events: none;
 }
+
+.mute{
+    background-color: rgb(67, 67, 67);
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
+}
+
+.mute i {
+    font-size: 22px;
+    pointer-events: none;
+}
+
+.mute:active{
+    scale: 0.95;
+}
