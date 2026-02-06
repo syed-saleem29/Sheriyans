@@ -1,0 +1,59 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+html, body {
+   height: 100%;
+   width: 100%;
+   background-color: black;
+
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* gap: 10px; */
+    anchor-name: --some-anchor;
+}
+
+.box{
+    height: 60px;
+    width: 120px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+}
+.box:hover{
+    anchor-name: --some-anchor;
+}
+
+.anchor{
+    /* width: 120px;
+    height: 60px; */
+    border-radius: 10px;
+    position: absolute;
+    top: anchor(top);
+    bottom: anchor(bottom);
+    left: anchor(left);
+    right: anchor(right);
+    position-anchor: --some-anchor;
+    background-color: rgb(206, 206, 206);
+    transition: all 0.2s linear;
+    pointer-events: none;
+    mix-blend-mode: difference;
+}
+
+/* .red{
+    background-color: rgb(169, 13, 13);
+}
+.green{
+    background-color: rgb(17, 94, 17);
+}
+.blue{
+    background-color: rgb(29, 29, 138);
+} */
+

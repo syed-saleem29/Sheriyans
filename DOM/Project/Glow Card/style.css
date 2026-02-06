@@ -31,18 +31,31 @@ html, body {
     height: 500px;
     width: 280px;
     padding-inline: 10px;
-    /* padding-bottom: 10px; */
     border-radius: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* box-shadow: 0 0 50px red; */
+    box-shadow: 0 0 0 red;
     background: linear-gradient( rgb(0, 0, 0)) padding-box,
-    conic-gradient(from var(--rotate), black,black,black,rgb(255, 0, 0),black) border-box;
+    conic-gradient(from var(--rotate),black,rgb(255, 0, 0),black) border-box;
     border: 5px solid rgba(0, 0, 0, 0);
     animation: borderAnimate 3s;
     animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-play-state: paused;
+    border-width: 0px;
+    transition: all 0.2s linear;
+    text-shadow:  3px 0 3px red;
+    
+    
+}
 
+.box:hover{
+    animation-play-state: running;
+    border-width: 5px;
+    box-shadow: 0 0 30px red;
+    color: red;
+    text-shadow: 3px 0 3px white;
 }
 img{
     width: 200px;
@@ -52,3 +65,7 @@ h1{
     padding: 10px;
 }
 
+p{
+    font-size: 19px;
+    /* font-weight: bold; */
+}
