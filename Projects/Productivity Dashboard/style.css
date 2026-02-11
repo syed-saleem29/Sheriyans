@@ -1,0 +1,30 @@
+@font-face {
+    font-family: aeonik;
+    src: url(./fonts/fonnts.com-Aeonik-Regular.ttf);
+}
+@font-face {
+    font-family: aeonik-bold;
+    src: url(./fonts/fonnts.com-Aeonik-Bold.ttf);
+}
+
+:root{
+    --pri:white;
+    --sec: black;
+    --tri: lightseagreen;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+html, body {
+   height: 100%;
+   width: 100%;
+}
+
+#main{
+    height: 100%;
+    width: 100%;
+    background-color: var(--sec);
+}
