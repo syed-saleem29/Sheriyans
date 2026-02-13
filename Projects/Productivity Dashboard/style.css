@@ -7,10 +7,13 @@
     src: url(./fonts/fonnts.com-Aeonik-Bold.ttf);
 }
 
-:root{
-    --pri:white;
-    --sec: black;
-    --tri: lightseagreen;
+/* Tron: Ares Dashboard Dark Theme */
+:root {
+    --lengra: linear-gradient(to right ,rgb(39, 4, 4),rgb(188, 19, 19),rgb(39, 4, 4));
+  --pri: rgb(188, 19, 19);    /* PRIMARY ACCENT: Digital Red - Active elements, critical KPIs, alerts */
+  --sec: #EF8354;    /* SECONDARY ACCENT: Neon Orange - Trends, secondary data, light trails */
+  --tri: #B0B3B8;    /* TERTIARY: Cool Ice Gray - Body text, labels, non-essential UI */
+  --bg:  #0F0F12;    /* BACKGROUND: Gritty Deep Charcoal - Main canvas (NOT pure black) */
 }
 
 * {
@@ -21,10 +24,140 @@
 html, body {
    height: 100%;
    width: 100%;
+   color: white;
+   overflow: hidden;
 }
 
 #main{
     height: 100%;
     width: 100%;
-    background-color: var(--sec);
+    background-color: var(--bg);
+}
+
+nav{
+    width: 100%;
+    background: var(--lengra);
+    height: 60px;
+    position: fixed;
+}
+
+section.allElems{
+    height: 100%;
+    width: 100%;
+    padding: 40px;
+    padding-top: 80px;
+    background-color: var(--bg2);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+    gap: 20px;
+    position: absolute;
+    /* overflow-x: hidden; */
+}
+
+.elem{
+    /* background-color: var(--tri); */
+    border: 1px solid rgb(95, 95, 95);
+    height: 350px;
+    width: 250px;
+    font-size: 20px;
+    border-radius: 10px;    
+    position: relative;
+    transition: all ease 0.2s;
+    cursor: pointer;
+    box-shadow: 3px 3px 10px var(--pri);
+}
+
+.elem img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.elem h2{
+    position: absolute;
+    width: 100%;
+    bottom: 5%;
+    text-align: center;
+    
+}
+
+.elem:active{
+    scale: 0.95;
+}
+
+.fullElem{
+    height: 100%;
+    width: 100%;
+    /* font-size: 20px; */
+    padding: 40px;
+    background-color: var(--bg);
+    transform: translate(100% );
+    position: absolute;
+    transition: transform 0.3s ease;
+    display: none;
+    overflow: hidden;
+}
+
+.fullElem.active {
+    display: block;
+    transform: translateX(0);
+}
+
+.back{
+    cursor: pointer;
+    position: absolute;
+    right: 5%;
+    border-radius: 50%;
+    border: none;
+    height: 40px;
+    width: 40px;
+    background: var(--pri);
+    font-size: 30px;
+    font-weight: 600;
+    border: 1px solid rgb(95, 95, 95);
+}
+
+.back:active{
+    scale: 0.96;
+}
+
+.todo-list-fullpage h2{
+    font-size: 35px;
+    width: 100%;
+}
+
+.todo-list-fullpage .todo-container{
+    height: 80%;
+    width: 100%;
+    background-color: var(--bg);
+    /* border: 4px solid rgb(95, 95, 95); */
+    margin-top: 50px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* overflow: hidden; */
+}
+.todo-list-fullpage .todo-container .addTask{
+    width: 33%;
+    height: 97%;
+    border: 2px solid rgb(95, 95, 95);
+    /* margin: 0.5%; */
+    border-radius: 10px;
+
+
+}
+.todo-list-fullpage .todo-container .allTask{
+    width: 65%;
+    height: 97%;
+    border: 2px solid rgb(95, 95, 95);
+    /* margin: 0.5%; */
+    border-radius: 10px;
+
+
+}
+
+.fullElem::-webkit-scrollbar {
+  display: none; /* Chrome/Safari/Opera - hides scrollbar */
 }
