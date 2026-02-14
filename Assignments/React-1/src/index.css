@@ -1,0 +1,400 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+}
+#root {
+  padding: 30px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .left {
+  font-size: 25px;
+  /* font-weight: 600; */
+}
+
+.navbar .middle {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+}
+
+.navbar .middle a {
+  text-decoration: none;
+  color: black;
+}
+
+.navbar .middle a:active {
+  scale: 0.96;
+}
+
+.navbar .right {
+  padding: 10px 15px;
+  background-color: rgb(31, 31, 31);
+  color: white;
+  font-weight: 100;
+  border-radius: 20px;
+}
+/* Seciton 1 */
+
+.section1 {
+  padding: 40px;
+  width: 100%;
+  height: 90vh;
+  background-image: url("https://media.istockphoto.com/id/1441121373/photo/sport-training-asian-indian-female-tennis-player-serving-the-ball-practicing-at-tennis-court.jpg?s=2048x2048&w=is&k=20&c=36eZn88Wv_vTZ14m59oBXc-muVnk4MEgcNq99oV2bNk=");
+  background-color: black;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.section1 .top {
+  text-align: center;
+  color: white;
+  padding: 100px;
+}
+.seciton1 .top h1 {
+  font-size: 40px;
+}
+
+.section1 .top button {
+  padding: 12px 22px;
+  margin-top: 20px;
+  outline: none;
+  border: none;
+  background-color: rgb(19, 19, 19);
+  color: rgb(217, 217, 217);
+  font-size: 18px;
+  font-weight: 100;
+  border-radius: 20px;
+}
+
+.section1 .bottom {
+  display: flex;
+  color: white;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.section1 .bottom .social-links a {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+}
+
+/* Section 2 */
+
+.section2 .top {
+  padding: 40px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.section2 .top button {
+  padding: 5px 10px;
+  border-radius: 30px;
+  background-color: transparent;
+  border: 1px solid rgb(186, 186, 186);
+  height: fit-content;
+}
+.section2 .top p {
+  font-size: 20px;
+  font-weight: 450;
+}
+
+.section2 .middle {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.section2 .middle .box {
+  height: 300px;
+  width: 320px;
+  border-radius: 30px;
+  padding: 15px;
+}
+
+.section2 .middle .box1 h3 {
+  font-weight: 400;
+  font-size: 21px;
+  padding-bottom: 13px;
+}
+
+.section2 .middle .box1 button {
+  padding: 10px 20px;
+  width: fit-content;
+  height: fit-content;
+  font-size: 15px;
+  background-color: #2f96f7;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+}
+
+.section2 .middle .box1 button:active {
+  scale: 0.96;
+}
+
+.section2 .middle .box1 {
+  background-color: rgb(8, 11, 23);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.section2 .middle h3 span {
+  color: gray;
+}
+
+.section2 .middle .icon {
+  background-image: url(./assets/image.png);
+  background-size: cover;
+  height: 60px;
+  width: 60px;
+  filter: invert();
+}
+
+.section2 .box2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(https://plus.unsplash.com/premium_photo-1679938885972-180ed418f466?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+  background-position: center;
+  border: 1px solid rgb(213, 213, 213);
+}
+
+.section2 .box2 button {
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.338);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+.section2 .box2 button:active {
+  scale: 0.96;
+}
+
+.section2 .box3 {
+  background-color: rgb(235, 238, 238);
+  /* padding: 50px; */
+}
+
+.section2 .box3 h2 {
+  font-weight: 400;
+  font-size: 50px;
+}
+
+.section2 .box3 p {
+  font-size: 12px;
+  font-weight: 500;
+  color: gray;
+  padding: 10px 0;
+}
+
+.section2 .box3 h5 {
+  padding: 10px;
+}
+
+.section2 .box3 .separator {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section2 .box3 h5 span {
+  font-weight: 400;
+}
+
+.section2 .bottom {
+  width: 100%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.section2 .bottom h3 {
+  padding-bottom: 30px;
+  font-size: 20px;
+  font-weight: 500;
+  color: rgb(35, 35, 35);
+}
+
+.section2 .bottom .stats {
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+.section2 .bottom .stats p {
+  font-size: 13px;
+  font-weight: 500;
+  color: rgb(78, 77, 77);
+}
+
+/* Section 3 */
+
+.section3 {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 100px2;
+}
+
+.section3 .box {
+  height: 300px;
+  width: 340px;
+  border-radius: 30px;
+  padding: 15px;
+}
+
+.section3 .box1{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.section3 .box1 .btn1 {
+  padding: 5px 10px;
+  border-radius: 30px;
+  background-color: transparent;
+  border: 1px solid rgb(186, 186, 186);
+  height: fit-content;
+  width: fit-content;
+}
+
+.section3 .box1 .btn2 {
+  padding: 10px 15px;
+  background-color: rgb(31, 31, 31);
+  color: white;
+  font-weight: 100;
+  border-radius: 20px;
+  height: fit-content;
+  width: fit-content;
+  border: none;
+}
+.section3 .box1 h3{
+  font-size: 18px;
+  font-weight: 500;
+  padding-bottom: 70px;
+}
+
+.section3 .box2{
+  background-image: url(https://images.unsplash.com/photo-1767128890609-227bdfdb7f5c?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.section3 .box2 .bottom{
+  display: flex;
+  justify-content: space-between;
+}
+
+.section3 .box2 .btn1{
+  width: fit-content;
+  padding: 10px 20px;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.377), rgba(255, 255, 255, 0.377),transparent);
+  border: none;
+  color: white;
+  border-radius: 30px;
+}
+
+.section3 .box2 p{
+  color: white;
+  font-size: 13px;
+}
+.section3 .box2 .btn2{
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border: none;
+  font-size: 25px;
+}
+
+.section3 .box2 .btn2 i{
+  font-weight:100;
+}
+.section3 .box3{
+  /* background-color: orange; */
+  padding: 0;
+  overflow: hidden;
+  border-radius: 0;
+
+
+}
+.section3 .box3 .top{
+  background-image: url(https://plus.unsplash.com/premium_photo-1666913667023-4bfd0f6cff0a?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-position: center;
+  background-size: cover;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 25px;
+  padding: 15px;
+  color: white;
+  font-weight: 500;
+
+}
+
+.section3 .box3 .top button{
+  width: fit-content;
+  padding: 10px 20px;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.721), rgba(255, 255, 255, 0.377),transparent);
+  border: none;
+  color: white;
+  border-radius: 30px;
+}
+
+.section3 .box3 .bottom{
+  padding-top: 15px;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.section3 .box3 .bottom button{
+  border: none;
+  background-color: transparent;
+  font-size: 18px;
+  padding: 10px;
+
+}
+
