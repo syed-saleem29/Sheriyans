@@ -20,7 +20,7 @@
     19,
     19
   ); /* PRIMARY ACCENT: Digital Red - Active elements, critical KPIs, alerts */
-  --sec: #cc4004; /* SECONDARY ACCENT: Neon Orange - Trends, secondary data, light trails */
+  --sec: #b53a05; /* SECONDARY ACCENT: Neon Orange - Trends, secondary data, light trails */
   --tri: #b0b3b8; /* TERTIARY: Cool Ice Gray - Body text, labels, non-essential UI */
   --bg: #0f0f12; /* BACKGROUND: Gritty Deep Charcoal - Main canvas (NOT pure black) */
 }
@@ -42,35 +42,174 @@ body {
   height: 100%;
   width: 100%;
   background-color: var(--bg);
+  display: flex;
+  padding: 15x;
 }
 
 nav {
   width: 100%;
-  background: var(--lengra);
   height: 60px;
+  position: absolute;
+  padding: 20px 40px;
+}
+.nav-in {
+  width: 94.7%;
+  background: var(--lengra);
+  height: 45px;
   position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  border: 1px solid var(--tri);
+  border-radius: 10px;
+}
+
+.theme-checkbox {
+  --toggle-size: 7px; /* Sets a CSS variable that controls the overall size (1em = 16px now) */
+
+  -webkit-appearance: none; /* Removes default browser styling for Chrome/Safari */
+  -moz-appearance: none; /* Removes default browser styling for Firefox */
+  appearance: none; /* Removes default browser styling for all browsers */
+
+  width: 6.25em; /* Width = 6.25 × 16px = 100px (the toggle track width) */
+  height: 3.125em; /* Height = 3.125 × 16px = 50px (the toggle track height) */
+
+  /* Creates a gradient with RED on left 50%, BLUE on right 50% - no blending */
+  background: linear-gradient(
+      to right,
+      rgb(188, 19, 19) 50%,
+      rgb(60, 165, 192) 50%
+    )
+    no-repeat;
+
+  background-size: 205%; /* Makes the gradient 205% of the element's width (so we only see part of it) */
+  background-position: 0; /* Starts showing the LEFT side of the gradient (the RED part) */
+
+  -webkit-transition: 0.4s; /* Smooth animation for position changes in Safari */
+  -o-transition: 0.4s; /* Smooth animation for position changes in older Opera */
+  transition: 0.4s; /* Smooth animation for position changes in all browsers */
+
+  border-radius: 99em; /* Makes the ends fully rounded (pill shape) */
+  position: relative; /* Sets position context for the absolutely positioned knob (::before) */
+  cursor: pointer; /* Changes mouse cursor to hand when hovering */
+
+  font-size: var(--toggle-size); /* Sets 1em = 16px (from the variable) */
+}
+
+.theme-checkbox::before {
+  content: "";
+  width: 2.25em;
+  height: 2.25em;
+  position: absolute;
+  top: 0.438em;
+  left: 0.438em;
+  /* background: -webkit-gradient(linear, left top, right top, color-stop(50%, #efefef), color-stop(50%, #2a2a2a)) no-repeat; */
+  background: -o-linear-gradient(left, #efefef 50%, #2a2a2a 50%) no-repeat;
+  background: linear-gradient(to right, #efefef 50%, #2a2a2a 50%) no-repeat;
+  background-size: 205%;
+  background-position: 100%;
+  border-radius: 50%;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.theme-checkbox:checked::before {
+  left: calc(100% - 2.25em - 0.438em);
+  background-position: 0;
+}
+
+.theme-checkbox:checked {
+  background-position: 100%;
 }
 
 section.allElems {
-  height: 100%;
+  height: 80%;
+  top: 2px;
   width: 100%;
   padding: 40px;
-  padding-top: 80px;
+  padding-top: 0;
+  margin-top: 70px;
+
+  position: absolute;
   background-color: var(--bg2);
+}
+
+.allElems header {
+  height: 300px;
+  width: 100%;
+  background-color: none;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 1px solid var(--tri);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  /* background: url("https://4kwallpapers.com/images/walls/thumbs_3t/23270.jpg"); */
+  background: url("https://4kwallpapers.com/images/walls/thumbs_3t/23246.jpg");
+  background-position: 0px -160px;
+  background-size: cover;
+}
+
+.header1 h1 {
+  font-size: 50px;
+}
+
+.header1 h2 {
+  font-size: 28px;
+}
+
+.header1 .dayntime {
+  display: flex;
+  justify-content: baseline;
+  align-items: end;
+}
+
+.dayntime h4 {
+  padding-bottom: 8px;
+  padding-left: 7px;
+}
+
+.dayntime span {
+  font-size: 25px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+}
+
+.header1 h4 {
+  font-size: 30px;
+}
+
+.header2 {
+  text-align: right;
+}
+
+.header2 h2 {
+  font-size: 32px;
+  /* padding-right: 20px; */
+}
+.header2 h3 {
+  font-size: 26px;
+}
+.header2 h4 {
+  font-size: 18px;
+}
+
+.allElems .allFeatures {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
-  justify-content: space-around;
+  justify-content: space-between;
   gap: 20px;
-  position: absolute;
-  /* overflow-x: hidden; */
 }
 
 .elem {
   /* background-color: var(--tri); */
   border: 1px solid rgb(95, 95, 95);
-  height: 350px;
-  width: 250px;
+  height: 325px;
+  width: 235px;
   font-size: 20px;
   border-radius: 10px;
   position: relative;
@@ -126,6 +265,7 @@ section.allElems {
   font-size: 20px;
   font-weight: 600;
   border: 1px solid rgb(95, 95, 95);
+  color: white;
 }
 
 .back:active {
@@ -227,9 +367,17 @@ section.allElems {
   border: 1px solid var(--tri);
   border-radius: 10px;
   margin-bottom: 10px;
+  position: relative;
+}
+
+.task p {
+  font-size: 18px;
+  position: absolute;
+  top: 40px;
 }
 
 .task h5 {
+  padding-bottom: 20px;
   color: white;
   font-size: 25px;
   display: flex;
@@ -250,6 +398,7 @@ section.allElems {
 .task h5 span.false {
   opacity: 0;
 }
+
 .task button {
   color: white;
   background-color: var(--bg);
@@ -286,6 +435,9 @@ section.allElems {
   align-items: flex-start;
   justify-content: space-between;
   overflow: auto;
+}
+.day-planner::-webkit-scrollbar {
+  display: none;
 }
 .daily-planner-fullpage .day-planner .day-planner-time {
   display: flex;
@@ -385,8 +537,6 @@ section.allElems {
   position: relative;
 }
 
-
-
 .pomodoro-fullpage .pomo-timer {
   position: absolute;
   top: 50%;
@@ -434,4 +584,144 @@ section.allElems {
   padding: 8px 20px;
   border-radius: 10px;
   background-color: var(--bg);
+}
+
+.daily-goal-fullpage h2 {
+  /* font-size: 35px; */
+  width: 100%;
+}
+
+.daily-goal-fullpage .daily-container {
+  height: 80%;
+  width: 100%;
+  /* background-color: var(--bg); */
+  /* border: 4px solid rgb(95, 95, 95); */
+  margin-top: 50px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.daily-goal-fullpage .daily-container .addGoal {
+  width: 33%;
+  height: 97%;
+  border: 2px solid rgb(95, 95, 95);
+  border-radius: 10px;
+  background: var(--lengra);
+}
+.daily-goal-fullpage .daily-container .allGoals {
+  width: 65%;
+  height: 97%;
+  border: 2px solid rgb(95, 95, 95);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  overflow: auto;
+}
+
+.daily-goal-fullpage .daily-container .addGoal form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 40px;
+}
+
+.daily-goal-fullpage .daily-container .addGoal form #goal-input {
+  width: 100%;
+  padding: 15px 25px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: 600;
+  background-color: var(--bg);
+  border: 1px solid var(--tri);
+  outline: none;
+  color: white;
+}
+
+.daily-goal-fullpage .daily-container .addGoal form textarea {
+  width: 100%;
+  padding: 15px 25px;
+  /* margin-bottom: 10px; */
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: 600;
+  background-color: var(--bg);
+  border: 1px solid var(--tri);
+  outline: none;
+  color: white;
+}
+
+.daily-goal-fullpage .daily-container .addGoal form button {
+  width: 100%;
+  padding: 15px 25px;
+  margin: 10px 0;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: 600;
+  background-color: var(--sec);
+  border: 1px solid var(--tri);
+  outline: none;
+  color: white;
+  transition: all ease 0.3s;
+  cursor: pointer;
+}
+.daily-goal-fullpage .daily-container .addGoal form button:active {
+  scale: 0.96;
+}
+
+.goal {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  background: var(--lengra);
+  padding: 10px 40px;
+  border: 1px solid var(--tri);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  position: relative;
+}
+.goal p {
+  font-size: 18px;
+  position: absolute;
+  top: 40px;
+}
+
+.goal h5 {
+  padding-bottom: 20px;
+  color: white;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.goal button {
+  color: white;
+  background-color: var(--bg);
+  padding: 10px 20px;
+  border: 1px solid var(--tri);
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.goal button:active {
+  scale: 0.96;
+}
+
+* {
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    color 0.3s ease,
+    filter 0.4s ease;
+}
+
+.elem img,
+.allElems header {
+  transition: filter 0.4s ease;
 }

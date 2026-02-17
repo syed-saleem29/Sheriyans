@@ -13,41 +13,69 @@
   </head>
   <body>
     <div id="main">
+      <nav>
+        <div class="nav-in">
+          <h2>Productivity Dashboard</h2>
+          <div class="theme">
+            <input type="checkbox" class="theme-checkbox" />
+          </div>
+        </div>
+      </nav>
       <section class="allElems">
-        <div class="todo elem" id="0">
-          <img
-            src="https://i.pinimg.com/736x/72/76/9a/72769ad0f81e69bd86aeb2a970ea06d1.jpg"
-            alt=""
-          />
-          <h2>ToDo List</h2>
-        </div>
-        <div class="daily elem" id="1">
-          <img
-            src="https://i.pinimg.com/736x/f4/e1/fb/f4e1fb58b081bfa9bd786b5c58c23615.jpg"
-            alt=""
-          />
-          <h2>Daily planner</h2>
-        </div>
-        <div class="moti elem" id="2">
-          <img
-            src="https://i.pinimg.com/736x/c1/f1/dd/c1f1dd3d4acfbb5fc44aeef6735f7eee.jpg"
-            alt=""
-          />
-          <h2>Motivation</h2>
-        </div>
-        <div class="pomo elem" id="3">
-          <img
-            src="https://i.pinimg.com/736x/3c/20/60/3c2060cdfc32badd89d25e6818ccfa82.jpg"
-            alt=""
-          />
-          <h2>Pomodoro Timer</h2>
-        </div>
-        <div class="goals elem" id="4">
-          <img
-            src="https://i.pinimg.com/736x/cc/44/76/cc4476698aceefe39b9512bf3a1f414d.jpg"
-            alt=""
-          />
-          <h2>Daily Goals</h2>
+        <header>
+          <div class="header1">
+            <h2>02 February, 2026</h2>
+            <div class="dayntime">
+              <h1>Saturday, 1:00</h1>
+              <h4>56</h4>
+              <span>pm</span>
+            </div>
+            <h4>Hyderabad</h4>
+          </div>
+          <div class="header2">
+            <h2>Weather</h2>
+            <h3>20°C</h3>
+            <h4>Humidity: 49%</h4>
+            <h4>Wind: 10 km/h</h4>
+            <h4>Light rain</h4>
+          </div>
+        </header>
+        <div class="allFeatures">
+          <div class="todo elem" id="0">
+            <img
+              src="https://i.pinimg.com/736x/72/76/9a/72769ad0f81e69bd86aeb2a970ea06d1.jpg"
+              alt=""
+            />
+            <h2>ToDo List</h2>
+          </div>
+          <div class="daily elem" id="1">
+            <img
+              src="https://i.pinimg.com/736x/f4/e1/fb/f4e1fb58b081bfa9bd786b5c58c23615.jpg"
+              alt=""
+            />
+            <h2>Daily planner</h2>
+          </div>
+          <div class="moti elem" id="2">
+            <img
+              src="https://i.pinimg.com/736x/c1/f1/dd/c1f1dd3d4acfbb5fc44aeef6735f7eee.jpg"
+              alt=""
+            />
+            <h2>Motivation</h2>
+          </div>
+          <div class="pomo elem" id="3">
+            <img
+              src="https://i.pinimg.com/736x/3c/20/60/3c2060cdfc32badd89d25e6818ccfa82.jpg"
+              alt=""
+            />
+            <h2>Pomodoro Timer</h2>
+          </div>
+          <div class="goals elem" id="4">
+            <img
+              src="https://i.pinimg.com/736x/cc/44/76/cc4476698aceefe39b9512bf3a1f414d.jpg"
+              alt=""
+            />
+            <h2>Daily Goals</h2>
+          </div>
         </div>
       </section>
 
@@ -130,7 +158,27 @@
         <button class="back" id="4">
           <i class="ri-arrow-left-s-line">Back</i>
         </button>
-        <h1>Daily Goals</h1>
+        <h2>Daily Goals:</h2>
+        <div class="daily-container">
+          <div class="addGoal">
+            <form>
+              <input
+                id="goal-input"
+                required
+                autocomplete="off"
+                type="text"
+                name="goal-name"
+                placeholder="Enter Goal"
+              />
+              <textarea
+                placeholder="Enter Details"
+                name="desctiption"
+              ></textarea>
+              <button>Add Goal</button>
+            </form>
+          </div>
+          <div class="allGoals"></div>
+        </div>
       </section>
     </div>
 
