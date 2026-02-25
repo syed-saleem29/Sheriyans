@@ -3,7 +3,7 @@ import githubData from "../../assets/github.json";
 import MacWindows from "../windows/MacWindows";
 import "./github.scss";
 
-const Github = () => {
+const Github = ({windowName, windowsState, setWindowsState}) => {
   const Gitcard = ({
     data = {
       id: 1,
@@ -23,8 +23,8 @@ const Github = () => {
             <h1>{data.title}</h1>
             <p className="description">{data.description}</p>
             <div className="tags">
-              {data.tags.map((tag) => (
-                <p className="tag">{tag}</p>
+              {data.tags.map((tag, idx) => (
+                <p key={idx} className="tag">{tag}</p>
               ))}
             </div>
             <div className="urls">
@@ -38,10 +38,10 @@ const Github = () => {
   };
 
   return (
-    <MacWindows>
+    <MacWindows windowName={windowName} windowsState={windowsState} setWindowsState={setWindowsState}>
       <div className="cards">
-        {githubData.map((project) => {
-          return <Gitcard data={project} />;
+        {githubData.map((project,idx) => {
+          return <Gitcard key={idx} data={project} />;
         })}
       </div>
     </MacWindows>

@@ -16,6 +16,7 @@
     "Open Sans",
     "Helvetica Neue",
     sans-serif;
+    cursor: default;
 
 
   .nav {
@@ -29,6 +30,7 @@
     .dots {
       display: flex;
       gap: 0.3rem;
+      
 
       .dot {
         height: 10px;
@@ -38,6 +40,11 @@
       }
       .red {
         background-color: rgb(216, 35, 35);
+        
+      }
+      :hover{
+        background-color: rgb(255, 0, 0);
+
       }
       .yellow {
         background-color: rgb(223, 223, 44);
