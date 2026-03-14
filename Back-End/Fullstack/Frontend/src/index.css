@@ -16,6 +16,7 @@ html{
   display: flex;
   gap: 1rem;
   padding: 1rem;
+  flex-wrap: wrap;
 }
 
 .note{
@@ -24,4 +25,27 @@ html{
   border-radius: 0.5rem;
   color: wheat;
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.note-create-form{
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 2rem;
+}
+
+.delete{
+  background-color: rgb(226, 54, 54);
+  border: none;
+  border-radius: 0.2rem;
+  padding: 0.2rem 0.5rem;
+  cursor: pointer;
+  color: wheat;
+}
+.delete:active{
+  scale: 0.95;
 }
