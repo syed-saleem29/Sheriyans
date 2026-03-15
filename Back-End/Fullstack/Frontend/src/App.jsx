@@ -5,7 +5,7 @@ const App = () => {
   const [notes, setNotes] = useState([]);
 
   function fetchNotes() {
-    axios.get("http://localhost:3000/api/notes").then((res) => {
+    axios.get("https://notes-vawd.onrender.com/api/notes").then((res) => {
       console.log(res.data.notes);
       setNotes(res.data.notes);
     });
@@ -21,7 +21,7 @@ const App = () => {
     const { title, description } = e.target.elements;
 
     axios
-      .post("http://localhost:3000/api/notes", {
+      .post("https://notes-vawd.onrender.com/api/notes", {
         title: title.value,
         description: description.value,
       })
@@ -34,7 +34,7 @@ const App = () => {
   }
   
   function handleDeleteNote(noteId){
-    axios.delete("http://localhost:3000/api/notes/"+noteId)
+    axios.delete("https://notes-vawd.onrender.com/api/notes/"+noteId)
     .then(res=>{
       console.log(res.data)
       fetchNotes()
