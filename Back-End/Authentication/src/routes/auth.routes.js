@@ -2,7 +2,7 @@ const express = require("express");
 const authRouter = express.Router();
 const jwt = require("jsonwebtoken");
 const userModel = require("../models/user.model");
-const crypto = require('crypto')
+const crypto = require("crypto");
 
 authRouter.post("/register", async (req, res) => {
   const { name, email, password } = req.body;
@@ -15,12 +15,12 @@ authRouter.post("/register", async (req, res) => {
     });
   }
 
-  const hash = crypto.createHash("md5").update(password).digest("hex")
+  const hash = crypto.createHash("md5").update(password).digest("hex");
 
   const user = await userModel.create({
     name,
     email,
-    password:hash,
+    password: hash,
   });
 
   const token = jwt.sign(
@@ -28,7 +28,7 @@ authRouter.post("/register", async (req, res) => {
       id: user._id,
       email: user.email,
     },
-    process.env.JWT_SECRET,
+    process.env.JWT_SECRET, {expiresIn : "6h"}
   );
 
   res.cookie("jwt_token", token);
@@ -41,11 +41,23 @@ authRouter.post("/register", async (req, res) => {
 });
 
 authRouter.post("/protected", (req, res) => {
-
   res.status(200).json({
     message: "Token Recieved",
   });
 });
+
+authRouter.get("/get-me",async (req, res)=>{
+  const token = req.cookies.jwt_token
+
+  const decode = jwt.verify(token, process.env.JWT_SECRET )
+
+  const user = await userModel.findById(decode.id)
+
+  res.json({
+    name: user.name,
+    email: user.email,
+  })
+})
 
 authRouter.post("/login", async (req, res) => {
   const { email, password } = req.body;
@@ -57,9 +69,8 @@ authRouter.post("/login", async (req, res) => {
       .status(404)
       .json({ message: "User not found with this email " + email });
 
-  const isPasswordMatched = user.password === crypto.createHash("md5").update(password).digest("hex")
-;
-
+  const isPasswordMatched =
+    user.password === crypto.createHash("md5").update(password).digest("hex");
   if (!isPasswordMatched) {
     return res.status(401).json({
       message: "Invalid Password",
@@ -70,15 +81,15 @@ authRouter.post("/login", async (req, res) => {
     {
       id: user._id,
     },
-    process.env.JWT_SECRET,
+    process.env.JWT_SECRET, { expiresIn   : "1h" }
   );
 
-  res.cookie("jwt_token",token)
+  res.cookie("jwt_token", token);
 
   res.status(200).json({
-    message:"User Logged In",
-    user
-  })
+    message: "User Logged In",
+    user,
+  });
 });
 
 module.exports = authRouter;
